@@ -1,0 +1,36 @@
+1. Generate key pair:
+
+> ssh-keygen -t ed25519 -C "jkkma@ha.org.hk"
+  : C:\Users\makk\.ssh\udemy-profile
+  :
+  Two files created:
+  - udemy-profile
+  - udemy-profile.pub
+  
+2. Add SSH Key to GitHub
+
+- Login GitHub
+- Click Icon -> Settings
+- Select "SSH and GPG keys" under "Access"
+- Click [New SSH key]
+- Enter any Title, then paste the content of .pub file to Key
+- Click [Add SSH key]
+
+3. To enable ssh-agent in Windows:
+
+Open PowerShell with Administrator right:
+
+PS> Get-Service ssh-agent
+
+PS> Get-Service ssh-agent | Set-Service -StartupType Manual
+
+PS> Start-Service ssh-agent
+
+4. Push the file to GitHub using SSH link
+
+git init
+git add -A
+git commit -m "chore: first commit"
+git branch -M main
+git remote add origin git@github.com:JamesMAKK/gh-actions-course.git
+git push -u origin main
