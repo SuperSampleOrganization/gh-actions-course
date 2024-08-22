@@ -42,4 +42,8 @@ jobs:
         run: |
             echo "Workflow env: $MY_WORKFLOW_VAR"
             echo "Overwritten env:  $MY_OVERWRITTEN_VAR"
-      
+      - name: Print Env Variables without local env with env.XXX
+        run: |
+            echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
+            echo "Overwritten env:  ${{ env.MY_OVERWRITTEN_VAR }}"
+          
