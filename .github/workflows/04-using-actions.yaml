@@ -1,0 +1,16 @@
+name: 04 - Using Actions 
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    # 1. Install deps of our react application
+    # 2. Execute automated tests
+
+    steps:
+    - name: Show OS
+      run: |
+        echo "This job is running on an Ubuntu runner."
+        echo "${{ runner.os }}"
