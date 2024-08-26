@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Print PR title
         run: echo "${{ github.event.pull_request.title }}"
-      - name: Print PR label
-        run: echo "${{ toJSON(github.event.pull_request.labels) }}"
       - name: Print PR label via cat
         run: |
           cat << EOF
